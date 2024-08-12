@@ -1,13 +1,30 @@
 # Getting Started with Create React App
 
-# Live and Deployed version [here](https://mr-akhlaghi-react-expense-tracker.netlify.app/)
-
-
-
-![Preview Expense Tracker App](https://github.com/mrakhlaghi/React-Expense-Tracker/assets/103969331/cf87a0ca-6bb1-48d3-88f6-9732688976a6)
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# Live and Deployed version [here](https://mrakhlaghi.ir/)
+![login](/public/images/login-1.png "login")
+![login](/public/images/login-2.png "login")
+![login](/public/images/login-3.png "login")
+![login](/public/images/login-4.png "login")
+![login](/public/images/admin-1.png "login")
+![login](/public/images/admin-2.png "login")
+![login](/public/images/admin-3.png "login")
+![login](/public/images/admin-4.png "login")
+![login](/public/images/admin-5.png "login")
+![login](/public/images/owner-1.png "login")
+![login](/public/images/owner-2.png "login")
+![login](/public/images/owner-3.png "login")
+![login](/public/images/owner-4.png "login")
+![login](/public/images/owner-5.png "login")
+![login](/public/images/freelancer-1.png "login")
+![login](/public/images/freelancer-2.png "login")
+![login](/public/images/freelancer-3.png "login")
+![login](/public/images/freelancer-4.png "login")
+![login](/public/images/add-proposal-1.png "login")
+![login](/public/images/add-proposal-2.png "login")
+![login](/public/images/add-proposal-3.png "login")
+![login](/public/images/add-proposal-4.png "login")
+![login](/public/images/add-proposal-5.png "login")
+![login](/public/images/add-proposal-6.png "login")
 ## Available Scripts
 
 In the project directory, you can run:
