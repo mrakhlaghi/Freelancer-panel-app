@@ -3,12 +3,11 @@ import Auth from "./pages/Auth";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import CompleteProfile from "./pages/CompleteProfile";
-import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import OwnerDashboard from "./pages/OwnerDashboard";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
-import { DarkModeProvier } from "./context/DarkModeContext";
+import { DarkModeProvider } from "./context/DarkModeContext";
 import OwnerLayout from "./features/owner/OwnerLayout";
 import FreelancerDashboard from "./pages/FreelancerDashboard";
 import Proposals from "./pages/Proposals";
@@ -24,11 +23,12 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
-    <DarkModeProvier>
+    <DarkModeProvider>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
         <Toaster />
         <Routes>
+          <Route path="/" element={<Navigate to="/auth" replace />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/complete-profile" element={<CompleteProfile />} />
           <Route
@@ -71,11 +71,10 @@ function App() {
             <Route path="proposals" element={<Proposals />} />
             <Route path="projects" element={<SubmittedProjects />} />
           </Route>
-          <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </QueryClientProvider>
-    </DarkModeProvier>
+    </DarkModeProvider>
   );
 }
 

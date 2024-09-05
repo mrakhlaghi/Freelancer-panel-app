@@ -14,13 +14,22 @@ function AuthContainer() {
   const { handleSubmit, register, getValues } = useForm();
   const { user } = useUser();
 
-  useEffect(() => {
-    if (user) navigate("/", { replace: true });
+  useEffect(() => {     
+
+    if (user && user.status === 2) {
+      if (user.role === "FREELANCER") navigate("/freelancer/dashboard", { replace: true });
+      if (user.role === "OWNER") navigate("/owner/dashboard", { replace: true });
+      if (user.role === "ADMIN") navigate("/admin/dashboard", { replace: true });
+    }else{
+      navigate("/auth", { replace: true });
+    }
+    
   }, [user, navigate]);
 
   const {
     isPending: isSendingOtp,
     mutateAsync,
+    // mutateAsync give and return the promise that we want to call it in any fetch request
     data: otpResponse,
   } = useMutation({
     mutationFn: getOtp,

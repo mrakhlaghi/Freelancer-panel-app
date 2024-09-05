@@ -7,6 +7,8 @@ function Filter({ filterField, options }) {
   function handleClick(value) {
     searchParams.set(filterField, value);
     setSearchParams(searchParams);
+    //! why should i set searchParams.set() and after that setSearchParams(searchParams) it ???
+    //! ----->  if you set the value directly it will replace to all of the searchParams instead of add to them.😎😎
   }
 
   return (

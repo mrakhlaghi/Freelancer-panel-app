@@ -8,6 +8,8 @@ function FilterDropDown({ options, filterField }) {
   function handleChange(e) {
     searchParams.set(filterField, e.target.value);
     setSearchParams(searchParams);
+    //! why should i set searchParams.set() and after that setSearchParams(searchParams) it ???
+    //! ----->  if you set the value directly it will replace to all of the searchParams instead of add to them.😎😎
   }
 
   return (

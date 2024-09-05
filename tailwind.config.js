@@ -12,9 +12,11 @@ function withOpacity(variableName) {
   };
 }
 
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: ['class', '[class="dark-mode"]'],
+  darkMode: ["class", '[class="dark-mode"]'],
+  
   theme: {
     extend: {
       colors: {

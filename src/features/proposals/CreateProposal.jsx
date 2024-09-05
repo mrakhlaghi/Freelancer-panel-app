@@ -12,7 +12,7 @@ function CreateProposal({ onClose, projectId }) {
   const { createProposal, isCreating } = useCreateProposal();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     createProposal(
       { ...data, projectId },
       {

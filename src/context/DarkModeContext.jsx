@@ -3,7 +3,7 @@ import useLocalStorageState from "../hooks/useLocalStoragesTate";
 
 const DarkModeContext = createContext();
 
-export function DarkModeProvier({ children }) {
+export function DarkModeProvider({ children }) {
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(
     "isDarkMoode",
     window.matchMedia("(prefers-color-scheme: dark)").matches // true, false
@@ -32,9 +32,7 @@ export function useDarkMode() {
   const context = useContext(DarkModeContext);
 
   if (context === undefined)
-    throw new Error("DarkModeContext was used outside of DarkModeProvier");
+    throw new Error("DarkModeContext was used outside of DarkModeProvider");
 
   return context;
 }
-
-
